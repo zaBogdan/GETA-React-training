@@ -4,6 +4,10 @@
     max-width: 750px;
     display: flex;
     flex-direction: column;
+    box-shadow: 2px 5px;
+    margin: 1rem;
+    border-radius: 15px;
+    border: 2px 1px solid black;
 }
 
 .post .text{
@@ -21,6 +25,7 @@
     display: flex;
     max-width: auto;
     flex-direction: row wrap;
+    gap: 1rem;
 }
 .post .likeCount{
     justify-content: flex-start;
@@ -28,5 +33,6 @@
 .post .likeDislike{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-self: flex-end;
+    gap: 1rem;
 }

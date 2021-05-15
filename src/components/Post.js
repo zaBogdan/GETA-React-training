@@ -4,25 +4,24 @@ import './Post.css'
 import AddCommentForm from './AddCommentForm'
 import LikeCounter from './LikeCounter'
 import CommentList from './CommentList'
+import { MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBBtn } from 'mdbreact';
 
 const Post = ({text, image}) =>{
     const [comments,setComments]= useState([])
     const [likeCount,setlikeCount]= useState(0)
 
     return (
-        <div className="post">
-            { image ? <img src={image} alt={text}/> : null}
-
-            <p className="text">{text}</p>
-
+            <MDBCard style={{ width: "30rem", margin: "1rem" }}>
+            <MDBCardImage className="img-fluid" src={image} alt={text} cascade />
+            <MDBCardBody>
+                <MDBCardText>
+                {text}
+                </MDBCardText>
             <LikeCounter likeCount={likeCount} setlikeCount={setlikeCount} />
 
             <AddCommentForm setComments={setComments} />
-
-            <CommentList comments={comments} />
-
-
-        </div>
+            </MDBCardBody>
+            </MDBCard>
     )
 }
 
