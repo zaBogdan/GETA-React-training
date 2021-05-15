@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.post{
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post .text{
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.post img{
+    max-width: 750px !important;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.post .likes{
+    display: flex;
+    max-width: auto;
+    flex-direction: row wrap;
+}
+.post .likeCount{
+    justify-content: flex-start;
+}
+.post .likeDislike{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
